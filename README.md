@@ -1,3 +1,21 @@
+# Step 1: Start Kafka
+docker-compose up -d
+
+# Step 2: Create topic
+kafka-topics --create --topic stock-topic --bootstrap-server localhost:9092
+
+# Step 3: Install deps
+pip install -r requirements.txt
+
+# Step 4: Run producer
+python producer.py
+
+# Step 5: Run consumer
+python consumer.py
+
+# Step 6: Run dashboard
+streamlit run app.py
+
 # Real-Time Stock Data Pipeline
 
 ## Overview
