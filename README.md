@@ -48,3 +48,6 @@ streamlit run dashboard/app.py
 - Real-time data ingestion
 - Streaming pipeline
 - Live dashboard visualization
+docker exec -it kafka kafka-topics \
+--create --topic stock-topic \
+--bootstrap-server localhost:9092
